@@ -1,1 +1,3 @@
 @startuml hola
+A->B
+@enduml
