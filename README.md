@@ -3,6 +3,6 @@ Esta asignatura contribuye al desarrollo de la competencia “Resuelve problemas
 En este curso realizaremos un repaso por los fundamentos de la programación orientada a objetos. Además de esto, se desarrolla la conceptualización y aplicación de los paradigmas de programación Imperativa, Declarativa y script
 
 ### Contenido del repositorio 
-En este repositorio se encuentran los talleres designados en el curso de modelos de programación 2 
+En este repositorio se encuentran los talleres y proyectos designados en el curso de modelos de programación 2 
 
 
