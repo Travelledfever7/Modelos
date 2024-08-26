@@ -1,0 +1,8 @@
+@startuml AfinarInstrumentos
+participant Banda order 10
+participant Musico order 20
+participant Instrumento order 30
+skinparam style strictuml
+Banda->Musico++: 1:afinar()
+Musico->Instrumento++: 2:SerAfinado()
+@enduml
