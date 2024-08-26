@@ -1,0 +1,14 @@
+@startuml CrearBanda
+participant Control order 10
+participant Musico order 20
+participant Banda order 30
+participant Instrumento order 40
+skinparam style strictuml
+Control->Banda++: 1:CrearMusicos()
+Musico<--Banda: 2:<<create>>
+Banda-->Instrumento: 3:<<create>>
+deactivate Banda
+Banda-->Musico++: 4: AsignarInstrumento()
+Musico-->Instrumento++: 5: SerAsignado()
+deactivate Musico
+@enduml 
