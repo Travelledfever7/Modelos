@@ -1,0 +1,111 @@
+@startuml Diagrama_de_clases
+class Bajo{
+    +nombre
+    +tipo
+    +serTocado()
+    +serAfinado()
+    +serAsignado()
+}
+class Saxofon{
+    +nombre
+    +tipo
+    +serTocado()
+    +serAfinado()
+    +serAsignado()
+}
+class Tambor{
+    +nombre
+    +tipo
+    +serTocado()
+    +serAfinado()
+    +serAsignado()
+}
+class Piano{
+    +nombre
+    +tipo
+    +serTocado()
+    +serAfinado()
+    +serAsignado()
+}
+class Flauta{
+    +nombre
+    +tipo
+    +serTocado()
+    +serAfinado()
+    +serAsignado()
+}
+class Guitarra{
+    +nombre
+    +tipo
+    +serTocado()
+    +serAfinado()
+    +serAsignado()
+}
+class Arpa{
+    +nombre
+    +tipo
+    +serTocado()
+    +serAfinado()
+    +serAsignado()
+}
+class ContraBajo{
+    +nombre
+    +tipo
+    +serTocado()
+    +serAfinado()
+    +serAsignado()
+}
+class Ukelele{
+    +nombre
+    +tipo
+    +serTocado()
+    +serAfinado()
+    +serAsignado()
+}
+class Clarinete{
+    +nombre
+    +tipo
+    +serTocado()
+    +serAfinado()
+    +serAsignado()
+}
+interface Instrumento{
+    +nombre
+    +tipo
+    +serTocado()
+    +serAfinado()
+    +serAsignado()
+}
+class Musico{
+    +nombre
+    +tipo
+    +tocar()
+    +afinar()
+    +AsignarInstrumento()
+}
+class Banda{
+    +nombre
+    +Musicos
+    +Instrumentos
+    +hacerTocar()
+    +hacerAfinar()
+    +crearMusicos()
+}
+class Control{
+    crearBanda()
+}
+Bajo--|>Instrumento
+Saxofon--|>Instrumento
+Tambor--|>Instrumento
+Piano--|>Instrumento
+Flauta--|>Instrumento
+Guitarra--|>Instrumento
+Arpa--|>Instrumento
+ContraBajo--|>Instrumento
+Ukelele--|>Instrumento
+Clarinete--|>Instrumento
+Instrumento--Musico
+Instrumento--*Banda
+Musico--*Banda
+Banda--Control
+@enduml
