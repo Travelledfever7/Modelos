@@ -1,0 +1,38 @@
+section .data
+    num1 db 5            ; Primer número
+    num2 db 3            ; Segundo número
+    resultado_suma db 0  ; Resultado de la suma
+    mensaje_suma db 'Suma: ', 0
+
+section .text
+    global _start
+
+_start:
+    ; Cargar los números en los registros
+    mov al, [num1]
+    mov bl, [num2]
+
+    ; Sumar los números
+    add al, bl
+    mov [resultado_suma], al
+
+    ; Imprimir el mensaje 'Suma: '
+    mov eax, 4               ; sys_write
+    mov ebx, 1               ; file descriptor (stdout)
+    mov ecx, mensaje_suma    ; dirección del mensaje
+    mov edx, 6               ; longitud del mensaje (6 bytes)
+    int 0x80
+
+    ; Convertir el resultado de la suma a ASCII y mostrarlo
+    mov al, [resultado_suma]
+    add al, '0'              ; convertir a carácter ASCII
+    mov [resultado_suma], al
+
+    ; Imprimir el resultado de la suma
+    mov eax, 4               ; sys_write
+    mov ebx, 1               ; file descriptor (stdout)
+    mov ecx, resultado_suma  ; dirección del resultado
+    mov edx, 1               ; longitud del resultado (1 byte)
+    int 0x80
+
+    ; Salir del programa
