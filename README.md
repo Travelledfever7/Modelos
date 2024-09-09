@@ -6,7 +6,7 @@
 - Laura Daniela Muñoz Ipus - 20221020022
 
 ### Curso 
-Modelos de programación
+Modelos de programación 2
   
 ### Descripción del taller
 
